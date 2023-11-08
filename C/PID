@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    int pid1,pid2,pid3,pid4;
+    
+    if (pid1 = fork() == 0){
+        if(pid2 = fork() == 0){
+            if(pid3 = fork() == 0){
+                if(pid4 = fork() == 0){
+                    printf("Soy el Cuadrinieto \n");
+                }else{
+                    printf("Soy el Bisnieto \n");
+                }
+            }else{
+                printf("Soy el Nieto \n");
+            }
+        }else{
+            printf("Soy el Hijo \n");
+        }
+    }else{
+        printf("Soy el Padre \n");
+       
+    }
+   
+}
